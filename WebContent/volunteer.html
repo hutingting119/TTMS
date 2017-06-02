@@ -1,0 +1,182 @@
+<!DOCTYPE>
+<html>
+<head>
+
+    <meta charset="utf-8"/>
+    <title>盛红电影院管理系统</title>
+    <link rel="shortcut icon" href="./resource/pic/pic12.jpg">
+    <link rel="stylesheet" href="resource/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="./resource/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./resource/css/volunteer.css"/>
+
+    <script type="text/javascript" src="resource/js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="resource/js/bootstrap.js"></script>
+    <script type="text/javascript" src="resource/js/volunteer.js"></script>
+</head>
+
+<body>
+<nav id="navBar" class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="list">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" data-taog>盛红电影院管理系统</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="list">
+                <li class="active"><a href="#welcomeList">首页</a></li>
+                <li id="perfectUserInfoList"><a href="#perfectUserInfo">完善个人信息</a></li>
+                <li id="serviceSignList"><a href="#serviceSign">购票</a></li>
+                <li id="applyActivityList"><a href="#applyActivity">退票</a></li>
+                <li id="volunteerSignList"><a href="#volunteerSign" data-tab="contact">历史查看</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#modifyPassword" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> 修改密码</a>
+                </li>
+                <li><a href="#exit" id="userExit"><span class="glyphicon glyphicon-log-in"></span> 退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="volunteerContent">
+    <!-- 			首页 -->
+    <div id="welcomeList">
+    </div>
+    <!-- 			完善个人信息 -->
+    <div id="perfectUserInfo" class="addContentOverflow displayCustomDiv">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th></th>
+                <th>用户名</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>联系电话</th>
+            </tr>
+            </thead>
+            <tbody id="addVolunteerInfo">
+            </tbody>
+        </table>
+    </div>
+
+    <!--			申请活动 -->
+    <div id="applyActivity" class="displayCustomDiv">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>电影名称</th>
+                <th>座位号</th>
+                <th>开始时间</th>
+                <th>播放时长</th>
+            </tr>
+            </thead>
+            <tbody id="addapplyActivity">
+            </tbody>
+        </table>
+    </div>
+    <!-- 			服务队查看报名 -->
+    <div id="serviceSign" class="displayCustomDiv">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th></th>
+                <th>电影名称</th>
+                <th>座位号</th>
+                <th>购票状态状态</th>
+                <th>退票原因</th>
+            </tr>
+            </thead>
+            <tbody id="selectServiceSign">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 			志愿活动查看报名 -->
+    <div id="volunteerSign" class="displayCustomDiv">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>电影名称</th>
+                <th>购票时间</th>
+            </tr>
+            </thead>
+            <tbody id="volunteerSignBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- 底部 -->
+
+<div class="container" >
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+        <p class="">友情链接:
+            <a href="http://www.zgzyz.org.cn/" target="_blank">美团</a>
+            <a href="http://www.pubchn.com/" target="_blank">淘票票</a>
+            <a href="http://www.xaya.cn/forum.php/" target="_blank">百度糯米</a>
+        </p>
+        <p>&copy;版权信息</p>
+    </footer>
+</div>
+
+<!--		 修改密码 -->
+<div class="modal fade" id="modifyPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="btn btn-default btn-sm" disabled="disabled">
+                                    <span class="glyphicon glyphicon-user">原始密码</span>
+                                </label>
+                            </td>
+                            <td>
+                                <input id="oldPassword" type="password" class="form-control" placeholder="请输入密码">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-default btn-sm" disabled="disabled">
+                                    <span class="glyphicon glyphicon-user">新的密码</span>
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <input id="newPassword" type="password" class="form-control" placeholder="请确认密码">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="btn btn-default btn-sm" disabled="disabled">
+                                    <span class="glyphicon glyphicon-user">确认密码</span>
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <input id="newPasswordSure" type="password" class="form-control" placeholder="请确认密码">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="modifyNewPassword" type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

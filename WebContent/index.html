@@ -1,0 +1,511 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>盛红电影院管理系统</title>
+    <link rel="shortcut icon" href="./resource/pic/pic12.jpg">
+    <link rel="stylesheet" type="text/css" href="./resource/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="./resource/css/base.css"/>
+    <script src="./resource/js/jquery-3.1.1.js"></script>
+    <script src="./resource/js/bootstrap.js"></script>
+    <script src="./resource/js/index.js"></script>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav id="navBar" class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="list">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" data-taog>盛红电影院管理系统</a>
+        </div>
+        <div class="navbar-collapse collapse" id="list">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#" data-tab="activity">正在上映</a></li>
+                <li><a href="#summary-activity" data-tab="container">即将上映</a></li>
+                <li><a href="#foot-contact" data-tab="contact">联系我们</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-toggle="modal" data-target="#about-modal-regist"><span
+                        class="glyphicon glyphicon-user"></span> 注册</a></li>
+                <li><a href="#" data-toggle="modal" data-toggle="modal" data-target="#about-modal-login"><span
+                        class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 上轮播 -->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+        <li data-target="#carousel" data-slide-to="3"></li>
+        <li data-target="#carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="./resource/pic/logo1.jpg" width="100%" height="364" alt="1 slide"/>
+        </div>
+        <div class="item">
+            <img src="./resource/pic/logo3.jpg" width="100%" height="364" alt="1 slide"/>
+        </div>
+        <div class="item">
+            <img src="./resource/pic/logo2.jpg" width="100%" height="364" alt="1 slide"/>
+        </div>
+        <div class="item">
+            <img src="./resource/pic/logo4.jpg" width="100%" height="364" alt="1 slide"/>
+        </div>
+        <div class="item">
+            <img src="./resource/pic/logo5.jpg" width="100%" height="364" alt="1 slide"/>
+        </div>
+
+        <a class="left carousel-control" href="#carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+
+<!-- 标签页 -->
+<div class="container">
+    <ul class="nav nav-tabs" role="tabList" id="feature-tab">
+        <li class="active"><a href="#feature-chrome" role="tab" data-toggle="tab">神奇女侠</a></li>
+        <li><a href="#feature-firefox" role="tab" data-toggle="tab">加勒比海盗5</a></li>
+        <li><a href="#feature-opera" role="tab" data-toggle="tab">大雄的南极冰凉大冒险</a></li>
+        <li><a href="#feature-safari" role="tab" data-toggle="tab">荡寇风云</a></li>
+        <li><a href="#feature-ie" role="tab" data-toggle="tab">异星觉醒</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="feature-chrome">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">《神奇女侠》 <span
+                            class="text-muted">盖尔·加朵、克里斯·派恩主演</span></h2>
+
+                    <p class="lead">
+                        戴安娜·普林斯生活在亚马逊天堂岛，岛上只有女性，在她的成长过程中，一直受到母亲和姨母安提俄珀的悉心呵护。
+                        直到有一天，一架战机坠入天堂岛附近海域，戴安娜将坠海的飞行员史蒂夫救起，史蒂夫强调自己的目标是结束第一次世界大战，
+                        而戴安娜则认为这场人类的浩劫或许是战神阿瑞斯捣的鬼，于是决定与史蒂夫一起前往战争前线。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="./resource/pic/神奇女侠logo2.jpg"
+                         alt="Chrome">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="feature-firefox">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="./resource/pic/加勒比海盗logo.jpg"
+                         alt="Firefox">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">《加勒比海盗5》<span class="text-muted">约翰尼·德普主演</span>
+                    </h2>
+
+                    <p class="lead">
+                        亡灵萨拉查船长率领亡灵军队逃出百慕大三角区，扬言杀尽所有海盗，头号目标就是杰克船长。
+                        为对抗命运，杰克船长将起航寻找传说中海神波塞冬的三叉戟，
+                        因为这是能统治整个海洋的神器。波澜壮阔的海战争霸和史诗冒险就此展开。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="feature-opera">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">《大雄的南极冰凉大冒险》 <span class="text-muted">水田山葵主演</span>
+                    </h2>
+
+                    <p class="lead">
+                        夏天来了，经不住大雄的百般纠缠，哆啦A梦第一次同意带着小伙伴们来到南极，并建造了专属的南极乐园。
+                        没想到这场消夏之旅，被偶然发现的金环打断，快乐的旅程就此中止，他们来到十万年前的南极。
+                        这一次，哆啦A梦面临生死考验，地球也面临全面冻结的危险。没有了哆啦A梦，小伙伴们只能团结一心，才能拯救地球！</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="./resource/pic/南极清凉大冒险logo.jpg"
+                         alt="Opera">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="feature-safari">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="./resource/pic/荡寇风云.jpg"
+                         alt="Safari">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">《荡寇风云》 <span class="text-muted">赵文卓、洪金宝主演</span></h2>
+
+                    <p class="lead">
+                        故事发生于明嘉靖四十年，戚继光率领3000戚家军在台州附近的花街、新河等地与20000入侵倭寇周旋，
+                        戚家军人数较少，而且是从乡民中培养的类似于特种部队的军人。其对手倭寇的成分复杂而且战斗力惊人。
+                        九战九捷，是历史上著名的以少胜多的战役，史称“台州大捷”。此战之后，倭寇不敢进犯浙江，浙江倭患基本荡平。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="feature-ie">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">异星觉醒<span class="text-muted">丽贝卡·弗格森主演</span></h2>
+
+                    <p class="lead">
+                        国际空间站宇航员在对一份从火星取回的样本检测后，发现其中显现出生命迹象，
+                        而且是一种比人类预料的智慧的多的生命。目前还没有更进一步的细节，不清楚这部科幻片有无恐怖、惊悚成分，
+                        由杰克·吉伦哈(Jake·Gyllenhaal)、瑞安·雷诺(Ryan·Reynolds)和丽贝(Rebecca`Ferguson)共同主演的多主角科幻片。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="./resource/pic/异星觉醒logo.jpg"
+                         alt="IE">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider"/>
+</div>
+
+<!-- 风采展 -->
+<div class="container">
+    <ul class="nav nav-tabs" role="tabList">
+        <li class="active"><a href="#summary-activity" role="tab" data-toggle="tab">即将上映</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="summary-activity">
+            <div class="row">
+                <div id="activityCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#activityCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#activityCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="./resource/pic/style2.jpg" height="410" width="100%" alt="1 slide"/>
+                        </div>
+                        <div class="item">
+                            <img src="./resource/pic/style1.jpg" height="410" width="100%" alt="1 slide"/>
+                        </div>
+
+                        <a class="left carousel-control" href="#activityCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#activityCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr class="divider"/>
+</div>
+
+<!-- 联系我们 -->
+<div class="container">
+    <ul class="nav nav-tabs" role="tabList" id="foot-tab">
+        <li><a href="#foot-contact" role="tab" data-toggle="tab">联系我们</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="foot-contact">
+            <div class="row">
+                <div>
+                    <p class="lead">地址：陕西省西安市长安区西安邮电大学3号实验楼546</p>
+                    <p class="lead">电话：18829290611</p>
+                    <p class="lead">邮箱：m18829290611@163.com</p>
+                    <p class="lead">我们在西安，在PM2.5不太超标的日子里，欢迎来我们这里坐坐</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider"/>
+</div>
+
+<div class="container">
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+        <p class="">友情链接:
+            <a href="http://www.zgzyz.org.cn/" target="_blank">美团</a>
+            <a href="http://www.pubchn.com/" target="_blank">淘票票</a>
+            <a href="http://www.xaya.cn/forum.php/" target="_blank">百度糯米</a>
+        </p>
+        <p>&copy;版权信息</p>
+    </footer>
+</div>
+
+<!-- 注册 -->
+<div class="modal fade" id="about-modal-regist" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title" id="modal-label">注册</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-pills" role="tabList" id="regist_body">
+                    <li class="active"><a href="#regist_volunteer" role="tab" data-toggle="tab">管理员注册</a></li>
+                    <li><a href="#regist_organization" role="tab" data-toggle="tab">用户注册</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="regist_volunteer">
+                        <div class="row">
+                            <!-- 								管理员注册 -->
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td colspan="6">账号信息</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-lock">密码</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="registPassword" type="password" class="form-control"
+                                               id="inputPassword" placeholder="请输入密码">
+                                    </td>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-lock">密码确认</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="registPasswordSure" type="password" class="form-control"
+                                               id="inputPassword" placeholder="请输入密码">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">个人信息</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">&nbsp;姓名&nbsp;</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="name" type="text" class="form-control" placeholder="请输入姓名">
+                                    </td>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">&nbsp;性别&nbsp;</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <select id="sex" class="form-control">
+                                            <option>---请选择性别---</option>
+                                            <option>男</option>
+                                            <option>女</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">联系电话</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="phone" type="text" class="form-control" placeholder="请输入联系电话">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-envelope">&nbsp;邮箱&nbsp;</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="email" type="text" class="form-control" placeholder="请输入邮箱">
+                                    </td>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">身份证号</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="idcard" type="text" class="form-control" placeholder="请输入身份证号">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">出生年月</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="birthday" type="date" class="form-control" placeholder="请输入出生年月">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">&nbsp;QQ号&nbsp;</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="qq" type="text" class="form-control" placeholder="请输入QQ号码">
+                                    </td>
+                                </tr>
+                                <tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="regist_organization">
+                        <div class="row">
+                            <!-- 								普通用户注册 -->
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                    <th class="col-md-2"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">姓名</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="registOrganizationName" type="text" class="form-control"
+                                               placeholder="请输入姓名">
+                                    </td>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">&nbsp;性别&nbsp;</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <select id="sex" class="form-control">
+                                            <option>---请选择性别---</option>
+                                            <option>男</option>
+                                            <option>女</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">密码</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="registOrganizationPassword" type="password" class="form-control"
+                                               placeholder="请输入密码">
+                                    </td>
+                                    <td>
+                                        <label class="btn btn-default btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-user">确认密码</span>
+                                        </label>
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="registOrganizationPasswordSure" type="password" class="form-control"
+                                               placeholder="请确认密码">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="regist" type="button" class="btn btn-default">注册</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 登录 -->
+<div class="modal fade" id="about-modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title" id="modal-label">用户登录</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th class="col-md-2"></th>
+                        <th class="col-md-7"></th>
+                        <th class="col-md-3"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label class="btn btn-default btn-sm" disabled="disabled">
+                                <span class="glyphicon glyphicon-user">用户名</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input id="loginId" type="text" class="form-control" placeholder="请输入用户名">
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="btn btn-default btn-sm" disabled="disabled">
+                                <span class="glyphicon glyphicon-lock">密码</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="请输入密码">
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="login" type="button" class="btn btn-default">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
